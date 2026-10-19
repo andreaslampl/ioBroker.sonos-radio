@@ -1,0 +1,41 @@
+{
+  "name": "iobroker.sonos-radio",
+  "version": "0.1.0",
+  "description": "Web radio on Sonos speakers with a touch page for ioBroker VIS-2",
+  "author": "andreaslampl",
+  "license": "MIT",
+  "homepage": "https://github.com/andreaslampl/ioBroker.sonos-radio",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreaslampl/ioBroker.sonos-radio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andreaslampl/ioBroker.sonos-radio/issues"
+  },
+  "keywords": [
+    "ioBroker",
+    "Sonos",
+    "Radio",
+    "Webradio",
+    "VIS-2"
+  ],
+  "main": "main.js",
+  "files": [
+    "admin/",
+    "lib/",
+    "main.js",
+    "io-package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.2.3",
+    "ws": "^8.18.0"
+  },
+  "scripts": {
+    "test": "node --test --test-timeout=60000 test/*.test.js"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "common": {
+    "name": "sonos-radio",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": {
+        "en": "Initial release: web radio on Sonos with a touch page for VIS-2",
+        "de": "Erste Version: Webradio auf Sonos mit Touch-Seite für VIS-2"
+      }
+    },
+    "titleLang": {
+      "en": "Sonos web radio",
+      "de": "Sonos-Webradio"
+    },
+    "desc": {
+      "en": "Play web radio stations on Sonos speakers (one or several rooms together), with a big touch page for VIS-2. Local control, no cloud.",
+      "de": "Webradio-Sender auf Sonos-Lautsprechern abspielen (ein oder mehrere Räume gemeinsam), mit großer Touch-Seite für VIS-2. Lokale Steuerung, keine Cloud."
+    },
+    "authors": [
+      "andreaslampl"
+    ],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "mode": "daemon",
+    "icon": "sonos-radio.png",
+    "extIcon": "https://raw.githubusercontent.com/andreaslampl/ioBroker.sonos-radio/main/admin/sonos-radio.png",
+    "readme": "https://github.com/andreaslampl/ioBroker.sonos-radio/blob/main/README.md",
+    "enabled": true,
+    "type": "multimedia",
+    "compact": true,
+    "connectionType": "local",
+    "dataSource": "poll",
+    "adminUI": {
+      "config": "json"
+    },
+    "tier": 2,
+    "dependencies": [
+      {
+        "js-controller": ">=5.0.19"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=6.0.0"
+      }
+    ]
+  },
+  "native": {
+    "port": 8096,
+    "publicHost": "",
+    "hosts": "",
+    "pollInterval": 4,
+    "stations": [
+      {
+        "enabled": true,
+        "name": "Radio 88.6",
+        "url": "http://radio886.at/streams/radio_88.6/mp3",
+        "favorite": "",
+        "logo": "",
+        "color": "#263238"
+      },
+      {
+        "enabled": true,
+        "name": "Ö3",
+        "url": "https://orf-live.ors-shoutcast.at/oe3-q2a",
+        "favorite": "",
+        "logo": "",
+        "color": "#d32f2f"
+      },
+      {
+        "enabled": true,
+        "name": "Kronehit",
+        "url": "http://onair.krone.at/kronehit.mp3",
+        "favorite": "",
+        "logo": "",
+        "color": "#f57c00"
+      },
+      {
+        "enabled": true,
+        "name": "Welle 1",
+        "url": "https://live.welle1.at:15128/live",
+        "favorite": "",
+        "logo": "",
+        "color": "#1976d2"
+      },
+      {
+        "enabled": true,
+        "name": "Antenne Kärnten",
+        "url": "http://live.antenne.at/ak",
+        "favorite": "",
+        "logo": "",
+        "color": "#388e3c"
+      }
+    ]
+  },
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Sonos reachable",
+          "de": "Sonos erreichbar"
+        },
+        "type": "boolean",
+        "role": "indicator.connected",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.pageUrl",
+      "type": "state",
+      "common": {
+        "name": {
+          "en": "Radio page URL (for VIS-2)",
+          "de": "Adresse der Radio-Seite (für VIS-2)"
+        },
+        "type": "string",
+        "role": "url",
+        "read": true,
+        "write": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "rooms",
+      "type": "folder",
+      "common": {
+        "name": {
+          "en": "Rooms",
+          "de": "Räume"
+        }
+      },
+      "native": {}
+    }
+  ]
+}

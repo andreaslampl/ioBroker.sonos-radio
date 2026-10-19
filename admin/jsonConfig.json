@@ -1,0 +1,104 @@
+{
+  "i18n": true,
+  "type": "tabs",
+  "items": {
+    "tabStations": {
+      "type": "panel",
+      "label": "Stations",
+      "items": {
+        "stHelp": {
+          "type": "staticText",
+          "xs": 12,
+          "text": "Tip: save the stations as favorites in the Sonos app with the same name (e.g. \"Hitradio Ö3\" for Ö3). Then exactly the Sonos stream is used and the URL is only a fallback."
+        },
+        "stations": {
+          "type": "table",
+          "xs": 12,
+          "newLine": true,
+          "items": [
+            {
+              "type": "checkbox",
+              "attr": "enabled",
+              "title": "Active",
+              "width": "6%",
+              "default": true
+            },
+            {
+              "type": "text",
+              "attr": "name",
+              "title": "Name",
+              "width": "16%",
+              "default": "",
+              "validator": "!!data.name"
+            },
+            {
+              "type": "text",
+              "attr": "url",
+              "title": "Stream URL",
+              "width": "34%",
+              "default": ""
+            },
+            {
+              "type": "text",
+              "attr": "favorite",
+              "title": "Sonos favorite (optional)",
+              "width": "16%",
+              "default": ""
+            },
+            {
+              "type": "text",
+              "attr": "logo",
+              "title": "Logo URL (optional)",
+              "width": "16%",
+              "default": ""
+            },
+            {
+              "type": "color",
+              "attr": "color",
+              "title": "Color",
+              "width": "12%",
+              "default": "#2b6cb0"
+            }
+          ]
+        }
+      }
+    },
+    "tabSonos": {
+      "type": "panel",
+      "label": "Sonos and web server",
+      "items": {
+        "hosts": {
+          "type": "text",
+          "label": "IP of a Sonos speaker (optional)",
+          "help": "Empty = search automatically. Any one speaker is enough, all rooms are found from it. Several IPs separated by commas.",
+          "xs": 12,
+          "sm": 6
+        },
+        "pollInterval": {
+          "type": "number",
+          "label": "Update interval (s)",
+          "min": 2,
+          "max": 60,
+          "default": 4,
+          "xs": 12,
+          "sm": 3
+        },
+        "port": {
+          "type": "port",
+          "label": "Web server port",
+          "default": 8096,
+          "newLine": true,
+          "xs": 12,
+          "sm": 3
+        },
+        "publicHost": {
+          "type": "text",
+          "label": "Address of the ioBroker server for the links (optional)",
+          "help": "Empty = detected automatically",
+          "xs": 12,
+          "sm": 6
+        }
+      }
+    }
+  }
+}

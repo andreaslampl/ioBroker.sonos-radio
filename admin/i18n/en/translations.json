@@ -1,0 +1,17 @@
+{
+  "Stations": "Stations",
+  "Active": "Active",
+  "Name": "Name",
+  "Stream URL": "Stream URL",
+  "Sonos favorite (optional)": "Sonos favorite (optional)",
+  "Logo URL (optional)": "Logo URL (optional)",
+  "Color": "Color",
+  "Sonos and web server": "Sonos and web server",
+  "IP of a Sonos speaker (optional)": "IP of a Sonos speaker (optional)",
+  "Empty = search automatically. Any one speaker is enough, all rooms are found from it. Several IPs separated by commas.": "Empty = search automatically. Any one speaker is enough, all rooms are found from it. Several IPs separated by commas.",
+  "Update interval (s)": "Update interval (s)",
+  "Web server port": "Web server port",
+  "Address of the ioBroker server for the links (optional)": "Address of the ioBroker server for the links (optional)",
+  "Empty = detected automatically": "Empty = detected automatically",
+  "Tip: save the stations as favorites in the Sonos app with the same name (e.g. \"Hitradio Ö3\" for Ö3). Then exactly the Sonos stream is used and the URL is only a fallback.": "Tip: save the stations as favorites in the Sonos app with the same name (e.g. \"Hitradio Ö3\" for Ö3). Then exactly the Sonos stream is used and the URL is only a fallback."
+}
