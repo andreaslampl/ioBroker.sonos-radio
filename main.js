@@ -52,6 +52,7 @@ class SonosRadio extends utils.Adapter {
             hosts,
             log: this.log,
             pollInterval: (Number(this.config.pollInterval) || 4) * 1000,
+            startVolumes: Array.isArray(this.config.startVolumes) ? this.config.startVolumes : [],
             ...(this.discoverFn ? { discoverFn: this.discoverFn } : {}),
         });
         this.radio.on('status', st => this.onStatus(st).catch(err => this.log.warn(err.message)));

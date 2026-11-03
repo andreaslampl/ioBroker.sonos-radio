@@ -1,8 +1,12 @@
 {
   "common": {
     "name": "sonos-radio",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "news": {
+      "0.2.0": {
+        "en": "Start volume per room: when the radio starts in a room that was not playing radio (e.g. a soundbar coming from TV), the volume is set first (at most / exactly); changing the station keeps the volume",
+        "de": "Startlautstärke je Raum: Startet das Radio in einem Raum, der kein Radio spielte (z. B. Soundbar vom Fernsehen), wird zuerst die Lautstärke gesetzt (höchstens / genau); beim Senderwechsel bleibt sie"
+      },
       "0.1.0": {
         "en": "Initial release: web radio on Sonos with a touch page for VIS-2",
         "de": "Erste Version: Webradio auf Sonos mit Touch-Seite für VIS-2"
@@ -50,6 +54,7 @@
     "publicHost": "",
     "hosts": "",
     "pollInterval": 4,
+    "startVolumes": [],
     "stations": [
       {
         "enabled": true,

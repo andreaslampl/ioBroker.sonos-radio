@@ -30,6 +30,10 @@ no dependency on the sonos adapter.
   build environment; Sonos favorites are the recommended source.
 - Not yet tested against real Sonos hardware.
 
+- 0.2.0: owner's living room Sonos is a soundbar; the radio started with the loud TV volume -> config `startVolumes`
+  [{room (name/id, '' or * = all), volume, mode max (only turn down) | fixed}]; `Radio._startVolume()` in play() before
+  SetAVTransportURI for every target room that is not already playing one of our stations (station change keeps it).
+
 ## Conventions
 
 - UI texts and README in German, code and comments in English.

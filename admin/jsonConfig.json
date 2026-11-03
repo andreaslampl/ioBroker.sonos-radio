@@ -97,6 +97,53 @@
           "help": "Empty = detected automatically",
           "xs": 12,
           "sm": 6
+        },
+        "startHelp": {
+          "type": "staticText",
+          "newLine": true,
+          "xs": 12,
+          "text": "Start volume: when the radio is started in a room that is not playing radio (e.g. the soundbar comes from TV), this volume is set first. Changing the station keeps the volume. Room empty or * = all rooms."
+        },
+        "startVolumes": {
+          "type": "table",
+          "xs": 12,
+          "newLine": true,
+          "label": "Start volume per room",
+          "items": [
+            {
+              "type": "text",
+              "attr": "room",
+              "title": "Room (as in the Sonos app, empty = all)",
+              "width": "45%",
+              "default": ""
+            },
+            {
+              "type": "number",
+              "attr": "volume",
+              "title": "Volume (0-100)",
+              "width": "20%",
+              "min": 0,
+              "max": 100,
+              "default": 20
+            },
+            {
+              "type": "select",
+              "attr": "mode",
+              "title": "How",
+              "width": "35%",
+              "default": "max",
+              "options": [
+                {
+                  "label": "at most (only turn down)",
+                  "value": "max"
+                },
+                {
+                  "label": "always exactly",
+                  "value": "fixed"
+                }
+              ]
+            }
+          ]
         }
       }
     }

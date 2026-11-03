@@ -13,5 +13,12 @@
   "Web server port": "Port des Webservers",
   "Address of the ioBroker server for the links (optional)": "Adresse des ioBroker-Servers für die Links (optional)",
   "Empty = detected automatically": "Leer = automatisch erkannt",
-  "Tip: save the stations as favorites in the Sonos app with the same name (e.g. \"Hitradio Ö3\" for Ö3). Then exactly the Sonos stream is used and the URL is only a fallback.": "Tipp: Die Sender in der Sonos-App mit gleichem Namen als Favoriten speichern (z. B. „Hitradio Ö3“ für Ö3). Dann wird genau der Sonos-Stream verwendet, die Adresse ist nur Ersatz."
+  "Tip: save the stations as favorites in the Sonos app with the same name (e.g. \"Hitradio Ö3\" for Ö3). Then exactly the Sonos stream is used and the URL is only a fallback.": "Tipp: Die Sender in der Sonos-App mit gleichem Namen als Favoriten speichern (z. B. „Hitradio Ö3“ für Ö3). Dann wird genau der Sonos-Stream verwendet, die Adresse ist nur Ersatz.",
+  "Start volume: when the radio is started in a room that is not playing radio (e.g. the soundbar comes from TV), this volume is set first. Changing the station keeps the volume. Room empty or * = all rooms.": "Startlautstärke: Wird das Radio in einem Raum gestartet, der gerade kein Radio spielt (z. B. die Soundbar kommt vom Fernsehen), wird zuerst diese Lautstärke eingestellt. Beim Senderwechsel bleibt die Lautstärke. Raum leer oder * = alle Räume.",
+  "Start volume per room": "Startlautstärke je Raum",
+  "Room (as in the Sonos app, empty = all)": "Raum (wie in der Sonos-App, leer = alle)",
+  "Volume (0-100)": "Lautstärke (0–100)",
+  "How": "Wie",
+  "at most (only turn down)": "höchstens (nur leiser stellen)",
+  "always exactly": "immer genau"
 }

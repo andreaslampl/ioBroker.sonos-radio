@@ -1,6 +1,6 @@
 {
   "name": "iobroker.sonos-radio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Web radio on Sonos speakers with a touch page for ioBroker VIS-2",
   "author": "andreaslampl",
   "license": "MIT",

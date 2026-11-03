@@ -155,3 +155,31 @@ test('web page and WebSocket commands', async t => {
     await until(() => msgs.some(m => m.type === 'error'));
     assert.match(msgs.find(m => m.type === 'error').message, /Unbekannter Raum/);
 });
+
+test('start volume: set before playing when the room comes from TV / silence, kept when changing the station', async t => {
+    const { house, radio } = await setup(t, {
+        startVolumes: [
+            { room: 'Fernsehzimmer', volume: 18, mode: 'max' },
+            { room: '*', volume: 25, mode: 'fixed' },
+        ],
+    });
+    const tv = house.get('Fernsehzimmer');
+    tv.volume = 55; // TV was loud
+    house.get('Küche').volume = 10;
+    await radio.play(['fernsehzimmer'], 'Kronehit');
+    assert.equal(tv.volume, 18);
+    const order = tv.calls.filter(c => /SetVolume|SetAVTransportURI|Play/.test(c));
+    assert.ok(order.indexOf('SetVolume') < order.indexOf('SetAVTransportURI'), 'volume first, then the station');
+    // listener turns it up, changes the station: volume stays
+    await radio.setVolume('fernsehzimmer', 30);
+    await radio.refresh();
+    await radio.play(['fernsehzimmer'], 'Radio 88.6');
+    assert.equal(tv.volume, 30);
+    // "at most": a quieter room is not turned up; "fixed" for all other rooms sets exactly
+    await radio.stop(['fernsehzimmer']);
+    await radio.refresh();
+    tv.volume = 12;
+    await radio.play(['fernsehzimmer', 'kueche'], 'Ö3');
+    assert.equal(tv.volume, 12);
+    assert.equal(house.get('Küche').volume, 25);
+});

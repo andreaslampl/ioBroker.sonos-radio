@@ -49,6 +49,16 @@ Listen und können sich ändern.
 Wird kein Lautsprecher gefunden (steht im Log), die IP eines Sonos-Lautsprechers eintragen,
 z. B. aus der Sonos-App unter *Einstellungen → System → Info zu meinem System*.
 
+**Startlautstärke je Raum:** Wird das Radio in einem Raum gestartet, der gerade **kein Radio** spielt – z. B. die
+Soundbar im Wohnzimmer kommt noch vom Fernsehen und ist viel zu laut –, stellt der Adapter **zuerst** die Lautstärke
+ein und schaltet erst dann den Sender ein. Beim Senderwechsel bleibt die Lautstärke, die man gerade hat.
+
+| Raum | Lautstärke | Wie |
+| --- | --- | --- |
+| Name wie in der Sonos-App (z. B. `Wohnzimmer`), leer oder `*` = alle anderen Räume | 0–100 | **höchstens** = nur leiser stellen (war es leiser, bleibt es so) · **immer genau** |
+
+Gilt für die Radio-Seite, die Datenpunkte und die SmartView-Radio-Kachel.
+
 ## In VIS-2 einbinden
 
 Ein Widget **Basic → HTML** auf die Seite ziehen, auf die gewünschte Größe ziehen und eintragen
