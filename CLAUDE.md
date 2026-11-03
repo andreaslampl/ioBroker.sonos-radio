@@ -33,6 +33,8 @@ no dependency on the sonos adapter.
 - 0.2.0: owner's living room Sonos is a soundbar; the radio started with the loud TV volume -> config `startVolumes`
   [{room (name/id, '' or * = all), volume, mode max (only turn down) | fixed}]; `Radio._startVolume()` in play() before
   SetAVTransportURI for every target room that is not already playing one of our stations (station change keeps it).
+- 0.2.1: owner saw cryptic text as station while the TV ran -> `sourceName(uri)` in sonos.js: x-sonos-htastream = Fernseher,
+  x-rincon-stream = Line-In, x-sonos-vli/airplay = AirPlay / Bluetooth; nowPlaying returns that name, no title.
 
 ## Conventions
 

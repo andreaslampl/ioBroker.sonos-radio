@@ -1,8 +1,12 @@
 {
   "common": {
     "name": "sonos-radio",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "news": {
+      "0.2.1": {
+        "en": "Soundbar on TV (and line-in / AirPlay) shows \"Fernseher\" instead of cryptic device ids as station",
+        "de": "Soundbar am Fernseher (und Line-In / AirPlay) zeigt „Fernseher“ statt kryptischer Geräte-Kennungen als Sender"
+      },
       "0.2.0": {
         "en": "Start volume per room: when the radio starts in a room that was not playing radio (e.g. a soundbar coming from TV), the volume is set first (at most / exactly); changing the station keeps the volume",
         "de": "Startlautstärke je Raum: Startet das Radio in einem Raum, der kein Radio spielte (z. B. Soundbar vom Fernsehen), wird zuerst die Lautstärke gesetzt (höchstens / genau); beim Senderwechsel bleibt sie"

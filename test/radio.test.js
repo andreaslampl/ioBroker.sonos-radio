@@ -183,3 +183,10 @@ test('start volume: set before playing when the room comes from TV / silence, ke
     assert.equal(tv.volume, 12);
     assert.equal(house.get('Küche').volume, 25);
 });
+
+test('TV / line-in sources get plain names instead of device ids', () => {
+    const { sourceName } = require('../lib/sonos');
+    assert.equal(sourceName('x-sonos-htastream:RINCON_000E58123456:spdif'), 'Fernseher');
+    assert.equal(sourceName('x-rincon-stream:RINCON_000E58123456'), 'Line-In');
+    assert.equal(sourceName('x-rincon-mp3radio://radio886.at/streams/radio_88.6/mp3'), '');
+});
